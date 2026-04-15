@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qo‘qon shahar 45-sonli umumiy o‘rta ta’lim maktabi</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #333; background: #f8f9fa; }
+        
+        header {
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        nav {
+            background: #1e40af;
+            padding: 15px 0;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        nav a:hover { color: #93c5fd; }
+
+        .hero {
+            background: url('https://via.placeholder.com/1200x500/1e40af/ffffff?text=45-MAKTAB') no-repeat center center/cover;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.5);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        .hero h1 { font-size: 2.8rem; margin-bottom: 10px; }
+
+        section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h2 {
+            text-align: center;
+            color: #1e40af;
+            margin-bottom: 40px;
+            font-size: 2rem;
+        }
+        .about {
+            background: white;
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .news-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .news-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        footer {
+            background: #1e3a8a;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        .contact-info {
+            margin: 20px 0;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            nav ul { flex-direction: column; align-items: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">45-MAKTAB</div>
+        <h2>Qo‘qon shahar 45-sonli umumiy o‘rta ta’lim maktabi</h2>
+        <p>O‘zbekiston tumani, Qumbosti</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#bosh">Bosh sahifa</a></li>
+            <li><a href="#haqida">Maktab haqida</a></li>
+            <li><a href="#yangiliklar">Yangiliklar</a></li>
+            <li><a href="#ota-onalar">Ota-onalar uchun</a></li>
+            <li><a href="#aloqa">Aloqa</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero" id="bosh">
+        <div class="hero-content">
+            <h1>Bizning maktab – kelajak poydevori!</h1>
+            <p>Bilim, tarbiya va muvaffaqiyat maskani</p>
+        </div>
+    </section>
+
+    <section id="haqida" class="about">
+        <h2>Maktab haqida</h2>
+        <p><strong>Qo‘qon shahar 45-sonli umumiy o‘rta ta’lim maktabi</strong> O‘zbekiston tumani Qumbosti qishlog‘ida joylashgan zamonaviy ta’lim muassasasi.</p>
+        <br>
+        <p>Bizning asosiy maqsadimiz – o‘quvchilarga yuqori sifatli bilim berish, ularni vatanparvar va har tomonlama rivojlangan shaxs qilib tarbiyalash.</p>
+        <br>
+        <p><strong>Manzil:</strong> Qo‘qon shahar, O‘zbekiston tumani, Qumbosti (Olchazor ko‘chasi, 27-uy yoki aniq manzilingizni qo‘shing)</p>
+    </section>
+
+    <section id="yangiliklar" style="background: #f1f5f9;">
+        <h2>So‘nggi yangiliklar va tadbirlar</h2>
+        <div class="news-grid">
+            <div class="news-card">
+                <img src="https://via.placeholder.com/400x200/3b82f6/ffffff?text=Tadbir+1" alt="Tadbir">
+                <div style="padding: 15px;">
+                    <h3>1-sinf o‘quvchilari uchun tantanali qabul</h3>
+                    <p>2026-yil sentabr oyida bo‘lib o‘tdi.</p>
+                </div>
+            </div>
+            <div class="news-card">
+                <img src="https://via.placeholder.com/400x200/10b981/ffffff?text=Sport" alt="Sport">
+                <div style="padding: 15px;">
+                    <h3>Futbol musobaqasi</h3>
+                    <p>Maktab jamoasi tumanda 2-o‘rinni egalladi.</p>
+                </div>
+            </div>
+            <div class="news-card">
+                <img src="https://via.placeholder.com/400x200/f59e0b/ffffff?text=Ilmiy" alt="Ilmiy">
+                <div style="padding: 15px;">
+                    <h3>Fan olimpiadasi</h3>
+                    <p>Bizning o‘quvchilar 5 ta oltin medal oldi.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ota-onalar">
+        <h2>Ota-onalar uchun</h2>
+        <p>Murojaat qilish, savollar, takliflar uchun quyidagi forma orqali yozing yoki telefon orqali bog‘laning.</p>
+        <!-- Bu yerga keyinroq Google Form yoki oddiy forma qo‘shsa bo‘ladi -->
+    </section>
+
+    <footer id="aloqa">
+        <h2>Aloqa ma’lumotlari</h2>
+        <div class="contact-info">
+            <p><strong>Telefon:</strong> +998 945876400 (hozircha yo‘q bo‘lsa, keyin qo‘shing)</p>
+            <p><strong>Email:</strong> yusuf18081998@gmail.com (o‘zingiz yarating)</p>
+            <p><strong>Manzil:</strong> Qo‘qon shahar, O‘zbekiston tumani, Qumbosti qishlog‘i</p>
+        </div>
+        <p>&copy; 2026 Qo‘qon shahar 45-sonli umumiy o‘rta ta’lim maktabi. Barcha huquqlar himoyalangan.</p>
+    </footer>
+
+</body>
+</html>
