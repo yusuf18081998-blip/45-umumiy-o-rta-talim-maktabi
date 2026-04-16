@@ -1,191 +1,305 @@
 <!DOCTYPE html>
 <html lang="uz">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Qo‘qon shahar 45-sonli umumiy o‘rta ta’lim maktabi</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #333; background: #f8f9fa; }
-        
-        header {
-            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-        }
-        .logo {
-            font-size: 2.5rem;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-        nav {
-            background: #1e40af;
-            padding: 15px 0;
-        }
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-        }
-        nav a:hover { color: #93c5fd; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>45-Maktab | O'zbekiston tumani, Farg'ona viloyati</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green: #1a5c3a;
+    --green-light: #2d8a58;
+    --gold: #c8a04a;
+    --cream: #f5f0e8;
+    --dark: #0f1a14;
+    --text: #2a2a2a;
+    --border: rgba(26,92,58,0.15);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'IBM Plex Sans', sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    overflow-x: hidden;
+  }
 
-        .hero {
-            background: url('https://via.placeholder.com/1200x500/1e40af/ffffff?text=45-MAKTAB') no-repeat center center/cover;
-            height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-            position: relative;
-        }
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(0,0,0,0.5);
-        }
-        .hero-content {
-            position: relative;
-            z-index: 2;
-        }
-        .hero h1 { font-size: 2.8rem; margin-bottom: 10px; }
+  /* HEADER */
+  header {
+    background: var(--dark);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+  }
+  .header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 32px;
+    border-bottom: 2px solid var(--gold);
+  }
+  .logo-area { display: flex; align-items: center; gap: 14px; }
+  .logo-circle {
+    width: 50px; height: 50px;
+    background: var(--green-light);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 22px; font-weight: 800; color: white;
+    border: 2px solid var(--gold); flex-shrink: 0;
+  }
+  .logo-text h1 { font-family: 'Playfair Display', serif; font-size: 18px; color: white; font-weight: 600; line-height: 1.2; }
+  .logo-text p { font-size: 11px; color: var(--gold); font-weight: 300; letter-spacing: 1.5px; text-transform: uppercase; }
+  nav { display: flex; gap: 4px; align-items: center; }
+  nav a { color: rgba(255,255,255,0.75); text-decoration: none; padding: 8px 14px; border-radius: 6px; font-size: 13px; font-weight: 500; transition: all 0.2s; }
+  nav a:hover, nav a.active { color: white; background: var(--green); }
 
-        section {
-            padding: 60px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        h2 {
-            text-align: center;
-            color: #1e40af;
-            margin-bottom: 40px;
-            font-size: 2rem;
-        }
-        .about {
-            background: white;
-            border-radius: 10px;
-            padding: 40px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
+  /* HERO */
+  .hero {
+    background: linear-gradient(135deg, var(--dark) 0%, #0d3320 50%, var(--green) 100%);
+    padding: 80px 32px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; top: -50%; left: -50%;
+    width: 200%; height: 200%;
+    background: radial-gradient(circle at 30% 40%, rgba(200,160,74,0.08) 0%, transparent 50%),
+                radial-gradient(circle at 70% 60%, rgba(45,138,88,0.12) 0%, transparent 50%);
+    animation: pulse 8s ease-in-out infinite;
+  }
+  @keyframes pulse { 0%,100%{transform:scale(1)} 50%{transform:scale(1.05)} }
+  .hero-badge {
+    display: inline-block;
+    background: rgba(200,160,74,0.2);
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    padding: 6px 18px; border-radius: 20px;
+    font-size: 12px; letter-spacing: 2px; text-transform: uppercase;
+    margin-bottom: 24px; position: relative;
+  }
+  .hero h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(32px, 6vw, 58px);
+    color: white; line-height: 1.15; margin-bottom: 16px;
+    position: relative; font-weight: 800;
+  }
+  .hero h2 span { color: var(--gold); }
+  .hero p { color: rgba(255,255,255,0.65); font-size: 16px; max-width: 520px; margin: 0 auto 36px; position: relative; line-height: 1.7; }
+  .hero-stats { display: flex; justify-content: center; gap: 48px; position: relative; }
+  .stat { text-align: center; }
+  .stat-num { font-family: 'Playfair Display', serif; font-size: 36px; font-weight: 800; color: var(--gold); display: block; }
+  .stat-label { font-size: 12px; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 1px; }
 
-        .news-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-        .news-card {
-            background: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        .news-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
+  /* MAIN */
+  .main { max-width: 1100px; margin: 0 auto; padding: 48px 24px; }
+  .section-title { font-family: 'Playfair Display', serif; font-size: 28px; color: var(--green); margin-bottom: 8px; font-weight: 700; }
+  .section-divider { width: 60px; height: 3px; background: var(--gold); margin-bottom: 32px; border-radius: 2px; }
 
-        footer {
-            background: #1e3a8a;
-            color: white;
-            text-align: center;
-            padding: 40px 20px;
-        }
-        .contact-info {
-            margin: 20px 0;
-        }
+  /* NEWS */
+  .news-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px; margin-bottom: 56px; }
+  .news-card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 16px rgba(0,0,0,0.07); transition: transform 0.25s, box-shadow 0.25s; border: 1px solid var(--border); cursor: pointer; }
+  .news-card:hover { transform: translateY(-4px); box-shadow: 0 8px 32px rgba(26,92,58,0.15); }
+  .card-img { height: 160px; display: flex; align-items: center; justify-content: center; font-size: 48px; position: relative; }
+  .card-tag { position: absolute; top: 12px; left: 12px; background: var(--gold); color: white; font-size: 10px; font-weight: 600; padding: 4px 10px; border-radius: 20px; letter-spacing: 0.5px; text-transform: uppercase; }
+  .card-body { padding: 20px; }
+  .card-date { font-size: 11px; color: var(--gold); font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
+  .card-title { font-family: 'Playfair Display', serif; font-size: 15px; color: var(--text); line-height: 1.5; margin-bottom: 12px; font-weight: 600; }
+  .card-author { font-size: 12px; color: #888; display: flex; align-items: center; gap: 6px; }
+  .card-author::before { content: ''; width: 20px; height: 20px; background: var(--green); border-radius: 50%; display: inline-block; flex-shrink: 0; }
 
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2rem; }
-            nav ul { flex-direction: column; align-items: center; }
-        }
-    </style>
+  /* LEADERSHIP */
+  .leadership-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; margin-bottom: 56px; }
+  .leader-card { background: white; border-radius: 12px; padding: 24px 20px; text-align: center; border: 1px solid var(--border); transition: all 0.25s; }
+  .leader-card:hover { border-color: var(--green-light); box-shadow: 0 4px 20px rgba(26,92,58,0.12); }
+  .leader-avatar { width: 64px; height: 64px; background: linear-gradient(135deg, var(--green), var(--green-light)); border-radius: 50%; margin: 0 auto 14px; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 24px; color: white; font-weight: 700; border: 3px solid var(--gold); }
+  .leader-name { font-weight: 600; font-size: 14px; color: var(--text); margin-bottom: 6px; line-height: 1.4; }
+  .leader-role { font-size: 12px; color: var(--green-light); font-weight: 500; }
+
+  /* INFO */
+  .info-section { background: white; border-radius: 16px; padding: 36px; border: 1px solid var(--border); margin-bottom: 48px; }
+  .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .info-item { display: flex; gap: 14px; align-items: flex-start; }
+  .info-icon { width: 40px; height: 40px; background: var(--cream); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; border: 1px solid var(--border); }
+  .info-label { font-size: 11px; color: #999; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
+  .info-val { font-size: 14px; color: var(--text); font-weight: 500; line-height: 1.5; }
+
+  /* FOOTER */
+  footer { background: var(--dark); color: rgba(255,255,255,0.55); text-align: center; padding: 32px; font-size: 13px; border-top: 2px solid var(--gold); }
+  footer strong { color: var(--gold); }
+
+  @media (max-width: 640px) {
+    nav { display: none; }
+    .hero-stats { gap: 24px; }
+    .info-grid { grid-template-columns: 1fr; }
+    .header-top { padding: 12px 16px; }
+    .hero { padding: 56px 16px; }
+    .main { padding: 32px 16px; }
+  }
+</style>
 </head>
 <body>
 
-    <header>
-        <div class="logo">45-MAKTAB</div>
-        <h2>Qo‘qon shahar 45-sonli umumiy o‘rta ta’lim maktabi</h2>
-        <p>O‘zbekiston tumani, Qumbosti</p>
-    </header>
-
+<header>
+  <div class="header-top">
+    <div class="logo-area">
+      <div class="logo-circle">45</div>
+      <div class="logo-text">
+        <h1>45-Umumiy O'rta Ta'lim Maktabi</h1>
+        <p>O'zbekiston tumani · Farg'ona viloyati</p>
+      </div>
+    </div>
     <nav>
-        <ul>
-            <li><a href="#bosh">Bosh sahifa</a></li>
-            <li><a href="#haqida">Maktab haqida</a></li>
-            <li><a href="#yangiliklar">Yangiliklar</a></li>
-            <li><a href="#ota-onalar">Ota-onalar uchun</a></li>
-            <li><a href="#aloqa">Aloqa</a></li>
-        </ul>
+      <a class="active" href="#">Bosh sahifa</a>
+      <a href="#">Yangiliklar</a>
+      <a href="#">Rahbariyat</a>
+      <a href="#">Sinflar</a>
+      <a href="#">Aloqa</a>
     </nav>
+  </div>
+</header>
 
-    <section class="hero" id="bosh">
-        <div class="hero-content">
-            <h1>Bizning maktab – kelajak poydevori!</h1>
-            <p>Bilim, tarbiya va muvaffaqiyat maskani</p>
+<section class="hero">
+  <div class="hero-badge">Farg'ona viloyati · O'zbekiston tumani</div>
+  <h2>O'zbekiston tumani<br><span>45-Maktab</span></h2>
+  <p>Qumbosdi MFY, Toshminor 2-uy manzilida joylashgan, bilim va kelajak uchun poydevor yaratuvchi maktab.</p>
+  <div class="hero-stats">
+    <div class="stat"><span class="stat-num">45</span><span class="stat-label">Maktab raqami</span></div>
+    <div class="stat"><span class="stat-num">4</span><span class="stat-label">Bino</span></div>
+    <div class="stat"><span class="stat-num">∞</span><span class="stat-label">Imkoniyat</span></div>
+  </div>
+</section>
+
+<main class="main">
+
+  <h2 class="section-title">So'nggi Yangiliklar</h2>
+  <div class="section-divider"></div>
+  <div class="news-grid">
+
+    <div class="news-card">
+      <div class="card-img" style="background:linear-gradient(135deg,#1a5c3a,#2d8a58)">🏫<span class="card-tag">Ochiq dars</span></div>
+      <div class="card-body">
+        <div class="card-date">25 Fevral 2026</div>
+        <div class="card-title">4-D sinf o'quvchilari tomonidan NAMUNALI ochiq darslar namoyish qilindi</div>
+        <div class="card-author">Akbarova Dilorom Akramovna</div>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <div class="card-img" style="background:linear-gradient(135deg,#0d3320,#1a5c3a)">📖<span class="card-tag">Seminar</span></div>
+      <div class="card-body">
+        <div class="card-date">24 Fevral 2026</div>
+        <div class="card-title">Pedagogika kengashini o'tkazish tartibi mavzusida tuman seminari bo'ldi</div>
+        <div class="card-author">Akbarova Dilorom Akramovna</div>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <div class="card-img" style="background:linear-gradient(135deg,#2d8a58,#45b57a)">🌟<span class="card-tag">Kelajak soati</span></div>
+      <div class="card-body">
+        <div class="card-date">9 Fevral 2026</div>
+        <div class="card-title">Alisher Navoiy va Boburning buyukligi — "Kelajak soati" ochiq darsi</div>
+        <div class="card-author">Akbarova Dilorom Akramovna</div>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <div class="card-img" style="background:linear-gradient(135deg,#c8a04a,#a07830)">🐦<span class="card-tag">O'qish</span></div>
+      <div class="card-body">
+        <div class="card-date">5 Fevral 2026</div>
+        <div class="card-title">"Qushlar qanday un qurishadilar?" — O'qish fani ochiq darsi</div>
+        <div class="card-author">Akbarova Dilorom Akramovna</div>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <div class="card-img" style="background:linear-gradient(135deg,#1a3a5c,#2d5a8a)">✍️<span class="card-tag">Adabiyot</span></div>
+      <div class="card-body">
+        <div class="card-date">Yanvar 2026</div>
+        <div class="card-title">8-B sinflarda "Furqat she'rlarini o'rganish. Talmeh san'ati" ochiq darsi</div>
+        <div class="card-author">Isaqova Nazira Farhodjon qizi</div>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <div class="card-img" style="background:linear-gradient(135deg,#5c1a3a,#8a2d5a)">🏆<span class="card-tag">Bellashuv</span></div>
+      <div class="card-body">
+        <div class="card-date">2 Dekabr 2025</div>
+        <div class="card-title">6-A va 6-B sinflar o'rtasida "Tarix fani bilimdoni" bellashuvi bo'ldi</div>
+        <div class="card-author">Qosimova Moxira Olimjonovna</div>
+      </div>
+    </div>
+
+  </div>
+
+  <h2 class="section-title">Rahbariyat</h2>
+  <div class="section-divider"></div>
+  <div class="leadership-grid">
+    <div class="leader-card">
+      <div class="leader-avatar">X</div>
+      <div class="leader-name">Xudoyqulova Ximiraxon Chinpo'latovna</div>
+      <div class="leader-role">Direktor</div>
+    </div>
+    <div class="leader-card">
+      <div class="leader-avatar">B</div>
+      <div class="leader-name">Boratova Dilshunosxon Qobiljon qizi</div>
+      <div class="leader-role">Direktor o'rinbosari · O'qituvchi</div>
+    </div>
+    <div class="leader-card">
+      <div class="leader-avatar">H</div>
+      <div class="leader-name">Hojimatov Baxtiyor Bahodirovich</div>
+      <div class="leader-role">Direktor o'rinbosari</div>
+    </div>
+    <div class="leader-card">
+      <div class="leader-avatar">M</div>
+      <div class="leader-name">Mexmonova Dildoraxon Avazjonovna</div>
+      <div class="leader-role">Direktor o'rinbosari · O'qituvchi</div>
+    </div>
+  </div>
+
+  <h2 class="section-title">Manzil va Aloqa</h2>
+  <div class="section-divider"></div>
+  <div class="info-section">
+    <div class="info-grid">
+      <div class="info-item">
+        <div class="info-icon">🏢</div>
+        <div>
+          <div class="info-label">Asosiy bino</div>
+          <div class="info-val">Farg'ona viloyati, O'zbekiston tumani, Qumbosdi MFY, Toshminor 2-uy</div>
         </div>
-    </section>
-
-    <section id="haqida" class="about">
-        <h2>Maktab haqida</h2>
-        <p><strong>Qo‘qon shahar 45-sonli umumiy o‘rta ta’lim maktabi</strong> O‘zbekiston tumani Qumbosti qishlog‘ida joylashgan zamonaviy ta’lim muassasasi.</p>
-        <br>
-        <p>Bizning asosiy maqsadimiz – o‘quvchilarga yuqori sifatli bilim berish, ularni vatanparvar va har tomonlama rivojlangan shaxs qilib tarbiyalash.</p>
-        <br>
-        <p><strong>Manzil:</strong> Qo‘qon shahar, O‘zbekiston tumani, Qumbosti (Olchazor ko‘chasi, 27-uy yoki aniq manzilingizni qo‘shing)</p>
-    </section>
-
-    <section id="yangiliklar" style="background: #f1f5f9;">
-        <h2>So‘nggi yangiliklar va tadbirlar</h2>
-        <div class="news-grid">
-            <div class="news-card">
-                <img src="https://via.placeholder.com/400x200/3b82f6/ffffff?text=Tadbir+1" alt="Tadbir">
-                <div style="padding: 15px;">
-                    <h3>1-sinf o‘quvchilari uchun tantanali qabul</h3>
-                    <p>2026-yil sentabr oyida bo‘lib o‘tdi.</p>
-                </div>
-            </div>
-            <div class="news-card">
-                <img src="https://via.placeholder.com/400x200/10b981/ffffff?text=Sport" alt="Sport">
-                <div style="padding: 15px;">
-                    <h3>Futbol musobaqasi</h3>
-                    <p>Maktab jamoasi tumanda 2-o‘rinni egalladi.</p>
-                </div>
-            </div>
-            <div class="news-card">
-                <img src="https://via.placeholder.com/400x200/f59e0b/ffffff?text=Ilmiy" alt="Ilmiy">
-                <div style="padding: 15px;">
-                    <h3>Fan olimpiadasi</h3>
-                    <p>Bizning o‘quvchilar 5 ta oltin medal oldi.</p>
-                </div>
-            </div>
+      </div>
+      <div class="info-item">
+        <div class="info-icon">🏫</div>
+        <div>
+          <div class="info-label">Boshlang'ich ta'lim binosi</div>
+          <div class="info-val">Farg'ona viloyati, O'zbekiston tumani, Qumbosdi MFY, Toshminor 2-uy</div>
         </div>
-    </section>
-
-    <section id="ota-onalar">
-        <h2>Ota-onalar uchun</h2>
-        <p>Murojaat qilish, savollar, takliflar uchun quyidagi forma orqali yozing yoki telefon orqali bog‘laning.</p>
-        <!-- Bu yerga keyinroq Google Form yoki oddiy forma qo‘shsa bo‘ladi -->
-    </section>
-
-    <footer id="aloqa">
-        <h2>Aloqa ma’lumotlari</h2>
-        <div class="contact-info">
-            <p><strong>Telefon:</strong> +998 945876400 </p>
-            <p><strong>Email:</strong> yusuf18081998@gmail.com </p>
-            <p><strong>Manzil:</strong> Qo‘qon shahar, O‘zbekiston tumani, Qumbosti qishlog‘i</p>
+      </div>
+      <div class="info-item">
+        <div class="info-icon">🌿</div>
+        <div>
+          <div class="info-label">Maktab filiali</div>
+          <div class="info-val">O'zbekiston tumani, Yangi hayot qishlog'i</div>
         </div>
-        <p>&copy; 2026 Qo‘qon shahar 45-sonli umumiy o‘rta ta’lim maktabi. Barcha huquqlar himoyalangan.</p>
-    </footer>
+      </div>
+      <div class="info-item">
+        <div class="info-icon">📮</div>
+        <div>
+          <div class="info-label">Pochta manzili</div>
+          <div class="info-val">Farg'ona viloyati, O'zbekiston tumani, Qumbosdi MFY, Toshminor 2-uy</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <strong>45-Umumiy O'rta Ta'lim Maktabi</strong> · O'zbekiston tumani, Farg'ona viloyati<br>
+  <span style="font-size:12px;opacity:0.5;margin-top:6px;display:block;">© 2026 Barcha huquqlar himoyalangan</span>
+</footer>
 
 </body>
 </html>
