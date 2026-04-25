@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>45-Maktab | O'zbekiston tumani, Farg'ona viloyati</title>
+<title>45-Maktab | O'zbekiston tumani</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 
@@ -14,50 +14,43 @@
   --gold:#c8a04a;
   --cream:#f5f0e8;
   --dark:#0f1a14;
-  --text:#2a2a2a;
 }
-html{scroll-behavior:smooth;}
+
 *{margin:0;padding:0;box-sizing:border-box;}
 
 body{
   font-family:'IBM Plex Sans',sans-serif;
   background:var(--cream);
-  color:var(--text);
 }
 
 /* HEADER */
 header{
   background:var(--dark);
-  position:sticky;
-  top:0;
-  z-index:100;
-}
-.header-top{
+  padding:15px 30px;
   display:flex;
   justify-content:space-between;
-  padding:15px 30px;
   align-items:center;
 }
-.logo-circle{
-  width:50px;height:50px;
-  background:var(--green-light);
-  border-radius:50%;
-  display:flex;align-items:center;justify-content:center;
-  color:white;font-weight:bold;
+
+.logo{
+  color:white;
+  font-weight:600;
 }
+
 nav a{
   color:white;
-  margin-left:10px;
+  margin-left:15px;
   text-decoration:none;
 }
 
 /* HERO */
 .hero{
   text-align:center;
-  padding:80px 20px;
+  padding:70px 20px;
   background:linear-gradient(135deg,#0f1a14,#1a5c3a);
   color:white;
 }
+
 .hero span{color:var(--gold);}
 
 /* MAIN */
@@ -65,23 +58,19 @@ nav a{
 
 .section-title{
   font-size:26px;
-  margin-bottom:10px;
-}
-.section-divider{
-  width:60px;height:3px;background:var(--gold);
-  margin-bottom:25px;
+  margin-bottom:20px;
 }
 
 /* NEWS */
 .news-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+  grid-template-columns:repeat(auto-fill,minmax(250px,1fr));
   gap:20px;
-  margin-bottom:40px;
 }
+
 .news-card{
   background:white;
-  padding:20px;
+  padding:15px;
   border-radius:10px;
 }
 
@@ -90,22 +79,32 @@ nav a{
   display:grid;
   grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
   gap:20px;
+  margin-top:20px;
 }
+
 .leader-card{
   background:white;
   padding:20px;
-  text-align:center;
   border-radius:10px;
+  text-align:center;
 }
+
 .leader-avatar{
-  width:60px;height:60px;
+  width:60px;
+  height:60px;
   border-radius:50%;
   background:var(--green);
   color:white;
-  display:flex;align-items:center;justify-content:center;
+  display:flex;
+  align-items:center;
+  justify-content:center;
   margin:0 auto 10px;
 }
-.leader-role{color:var(--green-light);}
+
+.leader-role{
+  font-size:13px;
+  color:var(--green-light);
+}
 
 /* FOOTER */
 footer{
@@ -121,88 +120,66 @@ footer{
 <body>
 
 <header>
-<div class="header-top">
-<div class="logo-area" style="display:flex;gap:10px;align-items:center;">
-<div class="logo-circle">45</div>
-<div style="color:white;">
-45-Umumiy O'rta Ta'lim Maktabi<br>
-<small>O'zbekiston tumani · Farg'ona viloyati</small>
-</div>
-</div>
-
-<nav>
-<a href="#">Bosh sahifa</a>
-<a href="#yangiliklar">Yangiliklar</a>
-<a href="#rahbariyat">Rahbariyat</a>
-<a href="#aloqa">Aloqa</a>
-</nav>
-</div>
+  <div class="logo">45-Maktab</div>
+  <nav>
+    <a href="#">Bosh sahifa</a>
+    <a href="#">Yangiliklar</a>
+    <a href="#">Rahbariyat</a>
+    <a href="#">Aloqa</a>
+  </nav>
 </header>
 
 <section class="hero">
-<h2>O'zbekiston tumani<br><span>45-Maktab</span></h2>
+  <h1>45-Umumiy O'rta Ta'lim Maktabi</h1>
+  <p>O'zbekiston tumani <span>Farg'ona viloyati</span></p>
 </section>
 
 <main class="main">
 
-<!-- YANGILIKLAR -->
-<h2 id="yangiliklar" class="section-title">So'nggi Yangiliklar</h2>
-<div class="section-divider"></div>
+<h2 class="section-title">Yangiliklar</h2>
 
 <div class="news-grid">
-
-<a href="news1.html" style="text-decoration:none;color:inherit;"><div class="news-card">Ochiq dars</div></a>
-<a href="news2.html" style="text-decoration:none;color:inherit;"><div class="news-card">Seminar</div></a>
-<a href="news3.html" style="text-decoration:none;color:inherit;"><div class="news-card">Kelajak soati</div></a>
-<a href="news4.html" style="text-decoration:none;color:inherit;"><div class="news-card">O'qish darsi</div></a>
-<a href="news5.html" style="text-decoration:none;color:inherit;"><div class="news-card">Adabiyot</div></a>
-<a href="news6.html" style="text-decoration:none;color:inherit;"><div class="news-card">Bellashuv</div></a>
-
+  <div class="news-card">Ochiq dars o'tkazildi</div>
+  <div class="news-card">Seminar tashkil qilindi</div>
+  <div class="news-card">Kelajak soati darsi</div>
 </div>
 
-<!-- RAHBARIYAT -->
-<h2 id="rahbariyat" class="section-title">Rahbariyat</h2>
-<div class="section-divider"></div>
+<h2 class="section-title">Rahbariyat</h2>
 
 <div class="leadership-grid">
 
-<div class="leader-card">
-<div class="leader-avatar">X</div>
-<div>Xudoyqulova Ximiraxon</div>
-<div class="leader-role">Direktor</div>
+  <div class="leader-card">
+    <div class="leader-avatar">X</div>
+    <div>Xudoyqulova Ximiraxon</div>
+    <div class="leader-role">Direktor</div>
+  </div>
+
+  <!-- Shokirova direktordan keyin -->
+  <div class="leader-card">
+    <div class="leader-avatar">M</div>
+    <div>Shokirova Marg'uba</div>
+    <div class="leader-role">Psixolog</div>
+  </div>
+
+  <div class="leader-card">
+    <div class="leader-avatar">B</div>
+    <div>Boratova Dilshunosxon</div>
+    <div class="leader-role">Direktor o'rinbosari</div>
+  </div>
+
+  <div class="leader-card">
+    <div class="leader-avatar">H</div>
+    <div>Hojimatov Baxtiyor</div>
+    <div class="leader-role">Direktor o'rinbosari</div>
+  </div>
+
+  <div class="leader-card">
+    <div class="leader-avatar">M</div>
+    <div>Mexmonova Dildora</div>
+    <div class="leader-role">Zavuch</div>
+  </div>
+
 </div>
-
-<div class="leader-card">
-<div class="leader-avatar">M</div>
-<div>Shokirova Marg'uba</div>
-<div class="leader-role">Psixolog</div>
-</div>
-
-<div class="leader-card">
-<div class="leader-avatar">B</div>
-<div>Boratova Dilshunosxon</div>
-<div class="leader-role">Direktor o'rinbosari</div>
-</div>
-
-<div class="leader-card">
-<div class="leader-avatar">H</div>
-<div>Hojimatov Baxtiyor</div>
-<div class="leader-role">Direktor o'rinbosari</div>
-</div>
-
-<div class="leader-card">
-<div class="leader-avatar">M</div>
-<div>Mexmonova Dildora</div>
-<div class="leader-role">Zavuch</div>
-</div>
-
-</div>
-
-<!-- ALOQA -->
-<h2 id="aloqa" class="section-title">Aloqa</h2>
-<div class="section-divider"></div>
-
-<p>Farg'ona viloyati, O'zbekiston tumani</p>
 
 </main>
 
